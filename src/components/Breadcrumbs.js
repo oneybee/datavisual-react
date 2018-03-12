@@ -6,8 +6,8 @@ import s from '../styles/style';
 
 const breadCrumbTitles = {
   '': 'Home',
-  'Work1': 'Work2',
-  'Work2': 'Work1',
+  'Work1': 'Work1',
+  'Work2': 'Work2',
 };
 
 function BreadcrumbsItem({ match }) {

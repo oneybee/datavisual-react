@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './components/App';
 
 ReactDOM.render(
-  <BrowserRouter basename="/data-visualization-oneybee">
+  <BrowserRouter basename="/datavisual-react">
     <App />
   </BrowserRouter>,
   document.getElementById('root'),
