@@ -36,7 +36,7 @@ const data_radar = [
 ];
 
 var data_ow = [];
-var user_id = '';
+var teamName = '';
 
 class Work2 extends Component {
 
@@ -51,20 +51,20 @@ class Work2 extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  fetchDatas(leagueTable) {
-    fetch('http://api.football-data.org/v1/competitions/403/leagueTable').
+  fetchDatas(teamName) {
+    fetch('http://api.football-data.org/v1/competitions/394/leagueTable').
     then((Resoponse)=>Resoponse.json()).
     then((findresponse)=> {
-      console.log(findresponse.competitiveStats.careerStats.winston.average)
+      console.log(findresponse.standing)
       data_ow = [
-          { subject: 'allDamageDone', A: findresponse.competitiveStats.careerStats.winston.average.allDamageDone, B: 110, fullMark: 300 },
-          { subject: 'barrierDamageDone', A: findresponse.competitiveStats.careerStats.winston.average.barrierDamageDone, B: 130, fullMark: 300 },
-          { subject: 'damageBlocked', A: findresponse.competitiveStats.careerStats.winston.average.damageBlocked, B: 130, fullMark: 300 },
-          { subject: 'eliminationsPerLife', A: findresponse.competitiveStats.careerStats.winston.average.eliminationsPerLife, B: 100, fullMark: 300 },
-          { subject: 'heroDamageDone', A: findresponse.competitiveStats.careerStats.winston.average.heroDamageDone, B: 100, fullMark: 300 },
+          { subject: 'position', A: findresponse.standing.positon, B: 110, fullMark: 300 },
+          { subject: 'points', A: findresponse.standing.points, B: 130, fullMark: 300 },
+          { subject: 'goals', A: findresponse.standing.goals, B: 130, fullMark: 300 },
+          { subject: 'goalsAgainst', A: findresponse.standing.goalsAgainst, B: 100, fullMark: 300 },
+          { subject: 'wins', A: findresponse.standing.wins, B: 100, fullMark: 300 },
       ];
       this.setState({
-        owdata:findresponse.competitiveStats.careerStats.winston.average,
+        owdata:findresponse.standing,
         loading: false,
       })
 
@@ -76,20 +76,20 @@ class Work2 extends Component {
   }
   handleSubmit(event) {
     // alert('A name was submitted: ' + this.state.value);
-    user_id = this.state.value;
+    teamName = this.state.value;
     this.setState({loading: true});
     this.render();
-    this.fetchDatas(user_id);
+    this.fetchDatas(teamName);
     event.preventDefault();
   }
   render() {
-    console.log('user_id : ' + user_id);
+    console.log('teamName : ' + teamName);
     console.log('this.state.owdata : ' + this.state.owdata);
     if (!this.state.loading && this.state.owdata == undefined) return (
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>
-            배틀 태그:
+            2015-2016 성적:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
@@ -112,7 +112,7 @@ class Work2 extends Component {
               <Tooltip/>
               <PolarAngleAxis dataKey="subject" />
               <PolarRadiusAxis/>
-              <Radar name={user_id} dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>
+              <Radar name={teamName} dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>
             </RadarChart>
           </div>
         )}

@@ -16,12 +16,7 @@ export default function Home() {
 
   return (
     <div>
-      <p style={s.p}>
-        프로그래밍 언어 순위를 알아보자
-      </p>
-      <p style={s.p}>
-        data를 찾는데 있어서 참고한 {datalink('사이트')}
-      </p>
+
 
       <div>
       <p id="first">
