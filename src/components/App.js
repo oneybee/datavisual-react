@@ -11,7 +11,7 @@ import s from '../styles/app.style';
 export default function App() {
   return (
     <div style={s.root}>
-      <h1 style={s.title}>Data visualization</h1>
+
       
       <nav style={s.breadcrumbs}>
         <Breadcrumbs />

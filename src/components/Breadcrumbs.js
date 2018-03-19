@@ -5,7 +5,7 @@ import Interactive from 'react-interactive';
 import s from '../styles/style';
 
 const breadCrumbTitles = {
-  '': 'Home',
+  '': 'Analytics',
   'Work1': 'Work1',
   'Work2': 'Work2',
 };

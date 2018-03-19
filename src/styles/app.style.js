@@ -5,9 +5,10 @@ const s = Object.create(style);
 s.root = {
   fontFamily: 'helvetica, sans-serif',
   fontWeight: '300',
-  fontSize: '16px',
+  fontSize: '15px',
   letterSpacing: '0.025em',
   padding: '3vh 0 12vh 0',
+  margin: '20pt',
   width: '500px',
   // use responsive max-width to simulate padding/margin to allow
   // space for vertical scroll bar without creating horizontal scroll bar
@@ -41,7 +42,9 @@ s.repoLink = {
 };
 
 s.breadcrumbs = {
-  margin: '3vh 0',
+  fontSize: '24px',
+  marginTop: '123pt',
+  margin: '20pt',
 };
 
 s.creditLine = {

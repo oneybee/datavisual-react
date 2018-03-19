@@ -22,6 +22,14 @@ export default function Home() {
       <p style={s.p}>
         data를 찾는데 있어서 참고한 {datalink('사이트')}
       </p>
+
+      <div>
+      <p id="first">
+      <a href="/Work2"
+      >2015-2016</a>
+      </p>
+      </div>
+
       <div style={s.pageLinkContainer}>
         <Interactive
           as={Link}

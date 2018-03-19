@@ -21,10 +21,17 @@
       /*pass window height (w/o scroll bars) down to react app, note can't use vh becasue that
       includes scroll bars and mobile browser footer, etc so doesn't give viewable area*/
       html, body { height: 100%; }
-      html { background-color: #CEF6F5; }
-      h1 { color: white;
+      html { background-color: white; }
+      h1 { color: black;
             text-align: center; }
-      #root { background-color: #CEF6F5; min-height: 100%; }
+      #root { background-color: white; min-height: 100%; }
+      #first { 
+        background-color: #89A6FF; 
+        color:white;
+        width: 120pt;
+        height: 90pt;
+        text-align: center;
+         }
 
       /*required for IE/Edge to be compatible with left:50vw & transform:translate(-50%, 0),
       otherwise there is a phantom div on the right side of the screen (from the left:50vw),
@@ -93,6 +100,6 @@
   <body>
     <div id="root"></div>
     <!-- single page app in bundle.js -->
-    <script src="/datavisual-react/build/bundle.js"></script>
+    <script src="/build/bundle.js"></script>
   </body>
 </html>
