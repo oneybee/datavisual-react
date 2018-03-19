@@ -20,7 +20,7 @@ export default function Home() {
 
       <div>
       <p id="first">
-      <a href="/Work2"
+      <a href="/datavisual-react/Work2"
       >2015-2016</a>
       </p>
       </div>
