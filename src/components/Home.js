@@ -25,6 +25,12 @@ export default function Home() {
       </p>
       </div>
 
+      <div>
+      <h4>
+      Users by Location
+      </h4>
+      </div>
+
       <div style={s.pageLinkContainer}>
         <Interactive
           as={Link}
@@ -39,6 +45,16 @@ export default function Home() {
           to="/Work2"
         >JavaScript 순위변화</Interactive>
       </div>
+
+      <div id="blogmenu">
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">CPanel</a></li>
+          <li><a href="#">Messages</a></li>
+        </ul>
+      </div>
+
     </div>
   );
 }
