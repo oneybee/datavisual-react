@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data visualization_oneybee</title>
     <meta name="description" content="Lightweight solution for deploying single page apps with GitHub Pages. Code and concept by Rafael Pedicini.">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     
 
@@ -22,7 +23,7 @@
       }
       /*pass window height (w/o scroll bars) down to react app, note can't use vh becasue that
       includes scroll bars and mobile browser footer, etc so doesn't give viewable area*/
-      html, body { height: 100%; }
+      html, body { height: 100%; margin:0; padding:0; }
       html { background-color: white; }
       h1 { color: black;
             text-align: center; }
@@ -45,30 +46,57 @@
         text-align-last: center;
       }
       #blogmenu {
-        float: center;
-        margin-top: 90%;
-        box-shadow: 0px 0px 15px rgba(250,250,250,.9);
-        border-radius: 3px;
-        background-color: rgba(250,250,250,.9);
+        position: fixed;
+
+
       }
-      #blogMenu ul li {
-       float:left;
+
+
+
+      #blogmenu ul {
+        background-color:rgb(235,235,235);
         list-style-type:none;
+        height: 82.5pt;
+
+
+
+      }
+
+      #blogmenu ul li {
+        display:inline;
+
+
         }
 
-        #blogMenu a {
-          height:16px;
-          color:#f1f1f1;
-          font-family:arial;
-          font-size:12px;
-          padding:0 10px 0 10px;
-          text-decoration:none;
+
+        #blogmenu a {
+          font-family:HiraginoSans-W5;
+
+          font-size:10px;
+          letter-spacing: .1pt;
+          padding:0 33.7pt 0 33.7pt;
+          color: rgb(170,170,170);
+          text-align: center;
+          vertical-align: middle;
+          height: 82.5pt;
+
         }
 
-        #blogMenu a:hover {
-          color:#D4F4FA;
-          border-bottom:3px solid #FAED7D;
+        #blogmenu a:hover {
+          vertical-align: middle;
+
+          color:rgb(255,151,134);
+
+
         }
+
+        .icon{
+          color: rgb(170,170,170);
+
+
+
+        }
+
 
       /*required for IE/Edge to be compatible with left:50vw & transform:translate(-50%, 0),
       otherwise there is a phantom div on the right side of the screen (from the left:50vw),
