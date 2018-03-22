@@ -38,6 +38,13 @@ const data_radar = [
 var data_ow = [];
 var teamName = '';
 
+var obj = {  
+  method: 'GET',
+  headers: {
+    'X-Auth-Token': 'e600784123014d489c796ab72ed9587d'
+  },
+}
+
 class Work2 extends Component {
 
 
@@ -47,22 +54,22 @@ class Work2 extends Component {
       data:[],
       loading: false,
     }
-    // this.fetchDatas();
+    this.fetchDatas();
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   fetchDatas(teamName) {
-    fetch('http://api.football-data.org/v1/competitions/394/leagueTable').
+    fetch('http://api.football-data.org/v1/competitions/394/leagueTable', obj).
     then((Resoponse)=>Resoponse.json()).
     then((findresponse)=> {
-      console.log(findresponse.standing)
-      data_ow = [
-          { subject: 'position', A: findresponse.standing.positon, B: 110, fullMark: 300 },
-          { subject: 'points', A: findresponse.standing.points, B: 130, fullMark: 300 },
-          { subject: 'goals', A: findresponse.standing.goals, B: 130, fullMark: 300 },
-          { subject: 'goalsAgainst', A: findresponse.standing.goalsAgainst, B: 100, fullMark: 300 },
-          { subject: 'wins', A: findresponse.standing.wins, B: 100, fullMark: 300 },
-      ];
+      console.log('findresponse.standing', findresponse.standing)
+      // data_ow = [
+      //     { subject: 'position', A: findresponse.standing.positon, B: 110, fullMark: 300 },
+      //     { subject: 'points', A: findresponse.standing.points, B: 130, fullMark: 300 },
+      //     { subject: 'goals', A: findresponse.standing.goals, B: 130, fullMark: 300 },
+      //     { subject: 'goalsAgainst', A: findresponse.standing.goalsAgainst, B: 100, fullMark: 300 },
+      //     { subject: 'wins', A: findresponse.standing.wins, B: 100, fullMark: 300 },
+      // ];
       this.setState({
         owdata:findresponse.standing,
         loading: false,
@@ -79,7 +86,7 @@ class Work2 extends Component {
     teamName = this.state.value;
     this.setState({loading: true});
     this.render();
-    this.fetchDatas(teamName);
+    // this.fetchDatas(teamName);
     event.preventDefault();
   }
   render() {
