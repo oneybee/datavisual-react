@@ -5,9 +5,7 @@ import Work1 from './Work2';
 import ExampleTwoDeepComponent from './ExampleTwoDeepComponent';
 import PageNotFound from './PageNotFound';
 import s from '../styles/exampleComponent.style';
-import { LineChart, Line } from 'recharts';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
-import {Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis} from 'recharts';
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'Recharts';
 
 
 const Work2Text = () => (
@@ -63,6 +61,11 @@ class Work2 extends Component {
     then((Resoponse)=>Resoponse.json()).
     then((findresponse)=> {
       console.log('findresponse.standing', findresponse.standing)
+      console.log('findresponse.standing', findresponse.standing[0].home.goals)
+
+      console.log('Hertha Goals', findresponse.standing.find(x => x.teamName === 'Hertha BSC').home.goals)
+
+      // myArray.
       // data_ow = [
       //     { subject: 'position', A: findresponse.standing.positon, B: 110, fullMark: 300 },
       //     { subject: 'points', A: findresponse.standing.points, B: 130, fullMark: 300 },
