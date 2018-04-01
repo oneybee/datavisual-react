@@ -15,7 +15,7 @@ export default function Home() {
  
 
   return (
-    <div>
+    <div className="home">
 
 
       <div>
@@ -122,60 +122,6 @@ Written by 운영자
           to="/Work2"
         >JavaScript 순위변화</Interactive>
       </div>
-
-      <div id="blogmenu" className="bottom-nav">
-        <div className="row">
-          <div className="col-3">
-            <a href="#">
-              <i className="fa fa-clipboard fa-2x"></i>
-              <p>Dashboard</p>
-            </a>
-          </div>
-          <div className="col-3">
-            <a href="#">
-              <i className="fa fa-clipboard fa-2x"></i>
-              Dashboard
-            </a>
-          </div>
-          <div className="col-3">
-            <a href="#">
-              <i className="fa fa-clipboard fa-2x"></i>
-              Dashboard
-            </a>
-          </div>
-          <div className="col-3">
-            <a href="#">
-              <i className="fa fa-clipboard fa-2x"></i>
-              Dashboard
-            </a>
-          </div>
-        </div>
-        {/* <ul>
-        <table>
-          <tr>
-            <td>
-              <li><a href="#">
-                <i className="fa fa-clipboard fa-2x"></i>
-                Dashboard
-              </a></li>
-              <li><a href="#">
-                <i className="far fa-chart-bar fa-2x"></i>
-                Analytics
-              </a></li>
-              <li><a href="#">
-                <i className="fas fa-align-right fa-2x"></i>
-                CPanel
-              </a></li>
-              <li><a href="#">
-                <i className="fa fa-clipboard fa-2x"></i>
-                Messages
-              </a></li>
-            </td>
-          </tr>
-        </table>
-        </ul> */}
-      </div>
-
     </div>
   );
 }

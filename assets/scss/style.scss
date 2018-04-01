@@ -27,4 +27,6 @@ $enable-grid-classes:       true;
 @import 'ruucm/bootstrap/scss/mixins';
 @import 'ruucm/bootstrap/scss/grid';
 
+@import 'app';
 @import 'components/bottom-nav';
+// @import 'components/custom-rechart';

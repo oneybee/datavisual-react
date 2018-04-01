@@ -51,7 +51,7 @@ class Work2 extends Component {
          <CartesianGrid strokeDasharray="3 3"/>
          <Tooltip/>
          <Legend />
-         <Line type="monotone" dataKey="goals" stroke="#8884d8" activeDot={{r: 8}}/>
+         <Line type="monotone" dataKey="goals" stroke="#f0f0f0" activeDot={{r: 8}}/>
          <Line type="monotone" dataKey="goalsAgainst" stroke="#82ca9d" />
         </LineChart>
         {

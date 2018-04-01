@@ -21,17 +21,33 @@ export default function App() {
         <Route path="/Work2" component={Work2} />
         <Route component={PageNotFound} />
       </Switch>
-
-      <div>
-        <Interactive
-          as="a"
-          href="http://www.rafaelpedicini.com"
-          interactiveChild
-          focus={{}}
-          touchActive={{}}
-          touchActiveTapOnly
-        >
-        </Interactive>
+      <div id="blogmenu" className="bottom-nav">
+        <div className="row">
+          <div className="col-3">
+            <a href="#">
+              <i className="fa fa-clipboard fa-2x"></i>
+              <p>Dashboard</p>
+            </a>
+          </div>
+          <div className="col-3">
+            <a href="#">
+              <i className="far fa-chart-bar fa-2x"></i>
+              <p>Dashboard</p>
+            </a>
+          </div>
+          <div className="col-3">
+            <a href="#">
+              <i className="fas fa-align-right fa-2x"></i>
+              <p>Dashboard</p>
+            </a>
+          </div>
+          <div className="col-3">
+            <a href="#">
+              <i className="fa fa-clipboard fa-2x"></i>
+              <p>Dashboard</p>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
