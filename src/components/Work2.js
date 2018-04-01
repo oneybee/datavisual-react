@@ -4,7 +4,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 import Work1 from './Work2';
 import ExampleTwoDeepComponent from './ExampleTwoDeepComponent';
 import PageNotFound from './PageNotFound';
-import s from '../styles/exampleComponent.style';
+// import s from '../styles/exampleComponent.style';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'Recharts';
 
 

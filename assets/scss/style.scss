@@ -1,0 +1,30 @@
+// @import 'original';
+
+
+// Cleaning using skel
+@import 'ruucm/libs/skel';
+@include skel-breakpoints((
+  xlarge: '(max-width: 1680px)',
+  large: '(max-width: 1280px)',
+  medium: '(max-width: 980px)',
+  small: '(max-width: 736px)',
+  xsmall: '(max-width: 480px)',
+  xxsmall: '(max-width: 360px)'
+));
+
+
+@include skel-layout((
+  reset: 'full',
+  boxModel: 'border',
+));
+
+// Bootstrap Grid Only
+$enable-flex:               true;
+$enable-grid-classes:       true;
+
+@import 'ruucm/bootstrap/scss/functions';
+@import 'ruucm/bootstrap/scss/variables';
+@import 'ruucm/bootstrap/scss/mixins';
+@import 'ruucm/bootstrap/scss/grid';
+
+@import 'components/bottom-nav';

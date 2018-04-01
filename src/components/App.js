@@ -6,14 +6,12 @@ import Work1 from './Work1';
 import Work2 from './Work2';
 import PageNotFound from './PageNotFound';
 import Breadcrumbs from './Breadcrumbs';
-import s from '../styles/app.style';
+// import s from '../styles/app.style';
 
 export default function App() {
   return (
-    <div style={s.root}>
-
-      
-      <nav style={s.breadcrumbs}>
+    <div>
+      <nav>
         <Breadcrumbs />
       </nav>
 
@@ -24,7 +22,7 @@ export default function App() {
         <Route component={PageNotFound} />
       </Switch>
 
-      <div style={s.creditLine}>
+      <div>
         <Interactive
           as="a"
           href="http://www.rafaelpedicini.com"

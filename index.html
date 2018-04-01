@@ -5,104 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data visualization_oneybee</title>
     <meta name="description" content="Lightweight solution for deploying single page apps with GitHub Pages. Code and concept by Rafael Pedicini.">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    
 
     <style>
-      html, body, div, span, a, p, ul, li, h1, code, nav {
-        margin: 0;
-        border: 0;
-        padding: 0;
-        box-sizing: inherit;
-        font: inherit;
-        text-decoration: inherit;
-        text-align: inherit;
-        color: inherit;
-        background: transparent;
-      }
-      /*pass window height (w/o scroll bars) down to react app, note can't use vh becasue that
-      includes scroll bars and mobile browser footer, etc so doesn't give viewable area*/
-      html, body { height: 100%; margin:0; padding:0; }
-      html { background-color: white; }
-      h1 { color: black;
-            text-align: center; }
-      #root { background-color: white; min-height: 100%; }
-      #first { 
-        background-color: skyblue; 
-        color:white;
-        width: 120pt;
-        height: 90pt;
-        text-align: center;
-        margin-left: 20pt;
-        border-radius: 10px;
-         }
-      #second {
-        background-color: #FF9786;
-        color: white;
-        width:120pt;
-        height:90pt;
-        margin-left: 160pt;
-        text-align-last: center;
-      }
-      #blogmenu {
-        position: fixed;
-
-
-      }
-
-
-
-      #blogmenu ul {
-        background-color:rgb(235,235,235);
-        list-style-type:none;
-        height: 82.5pt;
-
-
-
-      }
-
-      #blogmenu ul li {
-        display:inline;
-
-
-        }
-
-
-        #blogmenu a {
-          font-family:HiraginoSans-W5;
-
-          font-size:10px;
-          letter-spacing: .1pt;
-          padding:0 33.7pt 0 33.7pt;
-          color: rgb(170,170,170);
-          text-align: center;
-          vertical-align: middle;
-          height: 82.5pt;
-
-        }
-
-        #blogmenu a:hover {
-          vertical-align: middle;
-
-          color:rgb(255,151,134);
-
-
-        }
-
-        .icon{
-          color: rgb(170,170,170);
-
-
-
-        }
-
-
-      /*required for IE/Edge to be compatible with left:50vw & transform:translate(-50%, 0),
-      otherwise there is a phantom div on the right side of the screen (from the left:50vw),
-      that the window will scroll to. Note the left:50vw and transform is used to center content
-      horizaontally based on vw to prevent content jump when vertical scroll bar show/hide.*/
-      body { overflow-x: hidden; }
     </style>
 
     <!-- start favicon -->
@@ -166,6 +74,6 @@
   <body>
     <div id="root"></div>
     <!-- single page app in bundle.js -->
-    <script src="/datavisual-react/build/bundle.js"></script>
+    <script src="/build/bundle.js"></script>
   </body>
 </html>

@@ -123,18 +123,57 @@ Written by 운영자
         >JavaScript 순위변화</Interactive>
       </div>
 
-      <div id="blogmenu">
-        <ul>
-          <li><a href="#">
-            <span class="icon"><i class="fa fa-clipboard fa-2x"></i></span>
-            Dashboard</a></li>
-          <li><a href="#">
-            Analytics</a></li>
-          <li><a href="#">
-            CPanel</a></li>
-          <li><a href="#">
-            Messages</a></li>
-        </ul>
+      <div id="blogmenu" className="bottom-nav">
+        <div className="row">
+          <div className="col-3">
+            <a href="#">
+              <i className="fa fa-clipboard fa-2x"></i>
+              <p>Dashboard</p>
+            </a>
+          </div>
+          <div className="col-3">
+            <a href="#">
+              <i className="fa fa-clipboard fa-2x"></i>
+              Dashboard
+            </a>
+          </div>
+          <div className="col-3">
+            <a href="#">
+              <i className="fa fa-clipboard fa-2x"></i>
+              Dashboard
+            </a>
+          </div>
+          <div className="col-3">
+            <a href="#">
+              <i className="fa fa-clipboard fa-2x"></i>
+              Dashboard
+            </a>
+          </div>
+        </div>
+        {/* <ul>
+        <table>
+          <tr>
+            <td>
+              <li><a href="#">
+                <i className="fa fa-clipboard fa-2x"></i>
+                Dashboard
+              </a></li>
+              <li><a href="#">
+                <i className="far fa-chart-bar fa-2x"></i>
+                Analytics
+              </a></li>
+              <li><a href="#">
+                <i className="fas fa-align-right fa-2x"></i>
+                CPanel
+              </a></li>
+              <li><a href="#">
+                <i className="fa fa-clipboard fa-2x"></i>
+                Messages
+              </a></li>
+            </td>
+          </tr>
+        </table>
+        </ul> */}
       </div>
 
     </div>
