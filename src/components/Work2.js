@@ -21,7 +21,6 @@ class Work2 extends Component {
     super()
     this.state = {
       data: [],
-      loaded: false,
     }
   }
   componentDidMount() {
@@ -39,14 +38,11 @@ class Work2 extends Component {
             {name: 'Hertha', goalsAgainst: responseJson.standing[6].goalsAgainst, goals: responseJson.standing[6].goals, amt: 2100},
               ]
           })
-        this.setState({loaded: true});
+        this.setState( );
         console.log(this.state.data)
       })
     }
   render() {
-    if (this.state.loaded == false)
-      return (<h1>loading..</h1>)
-    else
     return (
       <div>
         <LineChart width={800} height={300} data={this.state.data}>
