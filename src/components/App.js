@@ -11,6 +11,9 @@ import Breadcrumbs from './Breadcrumbs';
 export default function App() {
   return (
     <div>
+      <div id="head">
+        <i class="fas fa-bars"></i>
+      </div>
       <nav>
         <Breadcrumbs />
       </nav>
@@ -21,6 +24,7 @@ export default function App() {
         <Route path="/Work2" component={Work2} />
         <Route component={PageNotFound} />
       </Switch>
+
       <div id="blogmenu" className="bottom-nav">
         <div className="row">
           <div className="col-3">

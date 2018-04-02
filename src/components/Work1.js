@@ -21,7 +21,7 @@ const data = [
 
 const ExamplePageText = () => (
   <p style={s.p}>
-      <LineChart width={600} height={300} data={data}>
+        <LineChart width={600} height={300} data={data}>
        <XAxis dataKey="name" padding={{left: 30, right: 30}}/>
        <YAxis/>
        <CartesianGrid strokeDasharray="3 3"/>
