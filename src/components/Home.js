@@ -21,7 +21,7 @@ var obj = {
 }
 
 
-class Work2 extends Component {
+class HomeComponent extends Component {
   
   constructor() {
     super()
@@ -91,4 +91,4 @@ class Work2 extends Component {
   }
 }
 
-export default Work2;
+export default HomeComponent;
