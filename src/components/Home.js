@@ -76,10 +76,10 @@ class HomeComponent extends Component {
         <PieChart width={275} height={85} onMouseEnter={this.onPieEnter}>
         <Pie
           data={data}
-          cx={60} 
-          cy={60} 
-          innerRadius={60}
-          outerRadius={80} 
+          cx={40} 
+          cy={40} 
+          innerRadius={20}
+          outerRadius={30} 
           fill="#8884d8"
           paddingAngle={0}
         >
