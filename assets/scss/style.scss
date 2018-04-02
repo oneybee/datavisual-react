@@ -1,6 +1,3 @@
-// @import 'original';
-
-
 // Cleaning using skel
 @import 'ruucm/libs/skel';
 @include skel-breakpoints((
@@ -30,6 +27,6 @@ $enable-grid-classes:       true;
 @import 'app';
 @import 'components/bottom-nav';
 @import 'components/custom-rechart';
-@import 'header';
+@import 'components/header';
 @import 'components/analytics';
 @import 'components/headicon';
