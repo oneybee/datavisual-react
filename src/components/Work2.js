@@ -45,7 +45,7 @@ class Work2 extends Component {
     }
   render() {
     return (
-      <div>
+      <div className="custom-rechart">
         <LineChart width={800} height={300} data={this.state.data}>
          <XAxis dataKey="name" />
          <YAxis/>
