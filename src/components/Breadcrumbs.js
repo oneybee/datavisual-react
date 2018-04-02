@@ -5,18 +5,18 @@ import Interactive from 'react-interactive';
 import s from '../styles/style';
 
 const breadCrumbTitles = {
-  '': 'Analytics',
-  'Work1': 'Work1',
-  'Work2': 'Work2',
+  // '': 'Analytics',
+  // 'Work1': 'Work1',
+  // 'Work2': 'Work2',
 };
 
 function BreadcrumbsItem({ match }) {
   const title = breadCrumbTitles[match.url.split('/').slice(-1)];
-  const to = title === undefined ? '/' : match.url;
+  // const to = title === undefined ? '/' : match.url;
 
   return (
     <span>
-      <Interactive
+      {/* <Interactive
         as={Link}
         {...s.link}
         to={to}
@@ -24,7 +24,7 @@ function BreadcrumbsItem({ match }) {
       {!match.isExact && title && ' / '}
       {title &&
         <Route path={`${match.url === '/' ? '' : match.url}/:path`} component={BreadcrumbsItem} />
-      }
+      } */}
     </span>
   );
 }

@@ -790,7 +790,7 @@ body {
   margin-top: 150px; }
 
 .home {
-  padding: 16px 21px;
+  padding: 177px 21px;
   overflow-y: scroll;
   height: 730px; }
 
@@ -815,6 +815,23 @@ body {
       color: #ff9786; }
 
 .recharts-wrapper {
-  overflow-x: scroll; }
+  overflow-x: scroll;
+  position: relative;
+  right: 20px; }
+
+.head {
+  position: relative;
+  top: 69px;
+  left: 20px; }
+
+.h {
+  position: relative;
+  bottom: 36pt;
+  font-size: 24pt; }
+
+.headicon {
+  position: relative;
+  top: 20pt;
+  left: 220pt; }
 
 /*# sourceMappingURL=style.css.map */

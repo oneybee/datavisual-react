@@ -8,10 +8,14 @@ import PageNotFound from './PageNotFound';
 import Breadcrumbs from './Breadcrumbs';
 // import s from '../styles/app.style';
 
+
 export default function App() {
   return (
     <div>
-      <div id="head">
+      <div className="headicon"> 
+        <i class="fab fa-audible"></i> <i class="fas fa-wifi"></i> <i class="fas fa-battery-full"></i>
+      </div>
+      <div className="head">
         <i class="fas fa-bars fa-2x"></i>
       </div>
       <nav>
