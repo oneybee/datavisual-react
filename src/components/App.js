@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div>
       <div id="head">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars fa-2x"></i>
       </div>
       <nav>
         <Breadcrumbs />

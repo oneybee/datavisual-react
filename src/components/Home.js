@@ -45,24 +45,29 @@ class Work2 extends Component {
   render() {
     return (
       <div className="home">
-        <div> <img src="box.png"/> </div>
-        <LineChart width={335} height={200} data={this.state.data}>
-         <XAxis dataKey="name" />
-         <YAxis/>
-         <CartesianGrid strokeDasharray="3 3"/>
-         <Tooltip/>
-         <Legend />
-         <Line type="monotone" dataKey="goals" stroke="rgb(137, 166, 255)" activeDot={{r: 8}}/>
-         <Line type="monotone" dataKey="goalsAgainst" stroke="rgb(255, 151, 134)" />
-        </LineChart>
+      <div> <img src="box.png"/> </div>
+        <h1> Users by Location </h1>
+        <div> <h1>hello</h1> </div>
+        <div className="custom_rechart">
+          <LineChart width={335} height={200} data={this.state.data}>
+          <XAxis dataKey="name" />
+          <YAxis/>
+          <CartesianGrid strokeDasharray="3 3"/>
+          <Tooltip/>
+          <Legend />
+          <Line type="monotone" dataKey="goals" stroke="rgb(137, 166, 255)" activeDot={{r: 8}}/>
+          <Line type="monotone" dataKey="goalsAgainst" stroke="rgb(255, 151, 134)" />
+          </LineChart>
+        </div>
         {
           this.state.data.map( (dynamicData,key)=>
           <div key={key}>
-          {console.log('dynamicData', dynamicData)}
-            </div>
+            {console.log('dynamicData', dynamicData)}
+          </div>
           )
         }      
         <h4> 2015-2016 시즌 분데스리가 상위 7팀 득점, 실점 </h4>
+        
       </div>
     )
   }
