@@ -1,0 +1,30 @@
+.section-01 {
+    margin-top: 30px;
+    .item {
+        display: inline-block;
+        background-repeat: no-repeat;
+        height: 90px;
+        width: 147px;
+        margin-right: 12px;
+        h1 {
+            color: white;
+            font-size: 25px;
+        }
+        p {
+            color: white;
+            font-size: 15px;
+        }
+    }
+    .item-01 {
+        background: url('../../assets/images/box-color-01.png');
+    }
+    .item-02 {
+        background: url('../../assets/images/box-color-02.png');
+    }
+    .item-03 {
+        background: url('../../assets/images/box-color-03.png');
+    }
+    .item-04 {
+        background: url('../../assets/images/box-color-04.png');
+    }
+}

@@ -47,7 +47,25 @@ class HomeComponent extends Component {
     return (
       <div className="home">
         <a className="h"><p>Analytics</p></a>
-      <div> <img src="box.png"/> </div>
+        <div className="section-01">
+          {/* <img src="box.png"/> */}
+          <div className="item item-01">
+            <h1>25</h1>
+            <p>Active User</p>
+          </div>
+          <div className="item item-02">
+            <h1>25</h1>
+            <p>Active User</p>
+          </div>
+          {/* <div className="item item-03">
+            <h1>25</h1>
+            <p>Active User</p>
+          </div>
+          <div className="item item-04">
+            <h1>25</h1>
+            <p>Active User</p>
+          </div> */}
+        </div>
         <h1> Users by Location </h1>
         <PieChart width={275} height={85} onMouseEnter={this.onPieEnter}>
         <Pie
@@ -65,7 +83,7 @@ class HomeComponent extends Component {
           }
         </Pie>
       </PieChart>
-        <div> <h1>2015-2016 시즌 분데스리가 상위 7팀 득점, 실점</h1> </div>
+        <div> <h1>2015-2016 시즌 분데스리가 상위 4팀 득점, 실점</h1> </div>
         <div className="custom_rechart">
           <LineChart width={335} height={200} data={this.state.data}>
           <XAxis dataKey="name" />
