@@ -3,13 +3,14 @@ import Interactive from 'react-interactive';
 import { Switch, Route } from 'react-router-dom';
 import HomeComponent from './Home';
 import AboutComponent from './About';
+import HeaderComponent from './Header';
 import PageNotFound from './PageNotFound';
 
 
 export default function App() {
   return (
     <div>
-
+      <HeaderComponent />
       <Switch>
         <Route exact path="/" component={HomeComponent} />
         <Route path="/about" component={AboutComponent} />
