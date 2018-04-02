@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Code } from '../styles/style';
 import s from '../styles/home.style';
 
+
+
 export default function Home() {
   const datalink = text => (
     <Interactive
@@ -13,16 +15,15 @@ export default function Home() {
       >{text}</Interactive>
 );
  
-
   return (
     <div className="home">
-
 
       <div>
       <p id="first">
       <a href="/Work2"
       >2015-2016</a>
       </p>
+      <div> <img src="box.png" />;</div>
       </div>
 
       <div>
