@@ -828,7 +828,6 @@ body {
 
 .home {
   padding: 0 20px;
-  overflow-y: scroll;
   height: 730px; }
 
 .header {
@@ -877,7 +876,6 @@ body {
       color: #ff9786; }
 
 .recharts-wrapper {
-  overflow-x: scroll;
   position: relative;
   right: 20px; }
 
@@ -925,5 +923,13 @@ body {
     background: url("../../assets/images/box-color-03.png"); }
   .section-01 .item-04 {
     background: url("../../assets/images/box-color-04.png"); }
+
+.section-02 {
+  margin-top: 45px;
+  font-size: 15px; }
+
+.section-03 {
+  margin-top: 45px;
+  font-size: 15px; }
 
 /*# sourceMappingURL=style.css.map */

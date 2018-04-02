@@ -70,11 +70,12 @@ class HomeComponent extends Component {
             <p>Active User</p>
           </div> */}
         </div>
-        <h1> Users by Location </h1>
+        <div className="section-02">          
+          <h1> Users by Location </h1>
+        </div>  
         <PieChart width={275} height={85} onMouseEnter={this.onPieEnter}>
         <Pie
           data={data}
-
           cx={60} 
           cy={60} 
           innerRadius={60}
@@ -87,7 +88,7 @@ class HomeComponent extends Component {
           }
         </Pie>
       </PieChart>
-        <div> <h1>2015-2016 시즌 분데스리가 상위 4팀 득점, 실점</h1> </div>
+        <div className="section-03"> <h1>2015-2016 시즌 분데스리가 상위 4팀 득점, 실점</h1> </div>
         <div className="custom_rechart">
           <LineChart width={335} height={200} data={this.state.data}>
           <XAxis dataKey="name" />
