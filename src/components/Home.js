@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Interactive from 'react-interactive';
 import { Link, Route } from 'react-router-dom';
-import { Code } from '../styles/style';
-import s from '../styles/home.style';
+// import { Code } from '../styles/style';
+// import s from '../styles/home.style';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'Recharts';
 import { PieChart, Pie, Sector, Cell } from 'Recharts';
 
