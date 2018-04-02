@@ -5,10 +5,9 @@ import React, {component} from 'react';
 
 export default function HeaderComponent() {
   return (
-    <div className="headicon"> 
+    <div className="header"> 
       <span className="chief-mate chief-mate-menu"></span>
-      {/* <img src={profileImg} /> */}
-      <img src="assets/images/profile.jpg"/>
+      <a className="profile-img"><img src="assets/images/profile.jpg"/></a>
     </div>
   );
 }
