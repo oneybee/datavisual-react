@@ -50,12 +50,16 @@ class HomeComponent extends Component {
         <div className="section-01">
           {/* <img src="box.png"/> */}
           <div className="item item-01">
-            <h1>25</h1>
-            <p>Active User</p>
+            <div className="item-inner">
+              <h1>25</h1>
+              <p>Active User</p>
+            </div>
           </div>
           <div className="item item-02">
-            <h1>25</h1>
-            <p>Active User</p>
+            <div className="item-inner">
+              <h1>25</h1>
+              <p>Active User</p>
+            </div>
           </div>
           {/* <div className="item item-03">
             <h1>25</h1>

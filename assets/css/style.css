@@ -876,7 +876,20 @@ body {
     background-repeat: no-repeat;
     height: 90px;
     width: 147px;
-    margin-right: 12px; }
+    margin-right: 12px;
+    position: relative; }
+    .section-01 .item .item-inner {
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      bottom: auto;
+      right: auto;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      position: absolute; }
     .section-01 .item h1 {
       color: white;
       font-size: 25px; }

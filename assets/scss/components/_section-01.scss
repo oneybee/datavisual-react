@@ -6,6 +6,12 @@
         height: 90px;
         width: 147px;
         margin-right: 12px;
+        position: relative;
+        .item-inner {
+            text-align: center;
+            @include center(xy);
+            position: absolute;
+        }
         h1 {
             color: white;
             font-size: 25px;
