@@ -51,8 +51,8 @@ class Work2 extends Component {
          <CartesianGrid strokeDasharray="3 3"/>
          <Tooltip/>
          <Legend />
-         <Line type="monotone" dataKey="goals" stroke="#f0f0f0" activeDot={{r: 8}}/>
-         <Line type="monotone" dataKey="goalsAgainst" stroke="#82ca9d" />
+         <Line type="monotone" dataKey="goals" stroke="rgb(137, 166, 255)" activeDot={{r: 8}}/>
+         <Line type="monotone" dataKey="goalsAgainst" stroke="rgb(255, 151, 134)" />
         </LineChart>
         {
           this.state.data.map( (dynamicData,key)=>
