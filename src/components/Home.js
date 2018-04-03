@@ -7,14 +7,12 @@ import { PieChart, Pie, Sector, Cell } from 'Recharts';
 
 const data = [{name: 'golas', value: 80}, {name: 'goalsAgainst', value: 17},
                  ];
-
 const data01 = [{name: 'golas', value: 82}, {name: 'goalsAgainst', value: 34},
                  ];
 const data02 = [{name: 'golas', value: 56}, {name: 'goalsAgainst', value: 40},
-];
+                 ];
 const data03 = [{name: 'golas', value: 67}, {name: 'goalsAgainst', value: 50},
-];                
-
+                 ];                
 const COLORS = ['rgb(137, 166, 255)', 'rgb(255,151,134)'];
 
 
@@ -134,7 +132,7 @@ class HomeComponent extends Component {
           }
         </Pie>
       </PieChart>
-        <div className="section-03"> <h1>2015-2016 시즌 분데스리가 상위 4팀 득점, 실점</h1> </div>
+        <div className="section-03"> <a class="font"><p>2015-2016 시즌 분데스리가 상위 4팀 득점, 실점</p></a> </div>
         <div className="custom_rechart">
           <LineChart width={335} height={200} data={this.state.data}>
           <XAxis dataKey="name" />
