@@ -5,10 +5,17 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'Rec
 import { PieChart, Pie, Sector, Cell } from 'Recharts';
 
 
-const data = [{name: 'Group A', value: 36}, {name: 'Group B', value: 58},
-                  {name: 'Group C', value: 6}];
-const COLORS = ['rgb(137, 166, 255)','rgba(250,250,250,.9)', 'rgb(255,151,134)'];
+const data = [{name: 'golas', value: 80}, {name: 'goalsAgainst', value: 17},
+                 ];
 
+const data01 = [{name: 'golas', value: 82}, {name: 'goalsAgainst', value: 34},
+                 ];
+const data02 = [{name: 'golas', value: 56}, {name: 'goalsAgainst', value: 40},
+];
+const data03 = [{name: 'golas', value: 67}, {name: 'goalsAgainst', value: 50},
+];                
+
+const COLORS = ['rgb(137, 166, 255)', 'rgb(255,151,134)'];
 
 
 var obj = {  
@@ -73,7 +80,7 @@ class HomeComponent extends Component {
         <div className="section-02">          
           <h1> Users by Location </h1>
         </div>  
-        <PieChart width={275} height={85} onMouseEnter={this.onPieEnter}>
+        <PieChart width={375} height={85} onMouseEnter={this.onPieEnter}>
         <Pie
           data={data}
           cx={40} 
@@ -85,6 +92,45 @@ class HomeComponent extends Component {
         >
         	{
           	data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
+          }
+        </Pie>
+        <Pie
+          data={data01} 
+          cx={130} 
+          cy={40} 
+          innerRadius={20}
+          outerRadius={30} 
+          fill="#8884d8"
+          paddingAngle={0}
+        >
+        	{
+          	data01.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
+          }
+        </Pie>
+        <Pie
+          data={data02} 
+          cx={220} 
+          cy={40} 
+          innerRadius={20}
+          outerRadius={30} 
+          fill="#8884d8"
+          paddingAngle={0}
+        >
+        	{
+          	data02.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
+          }
+        </Pie>
+        <Pie
+          data={data03} 
+          cx={310} 
+          cy={40} 
+          innerRadius={20}
+          outerRadius={30} 
+          fill="#8884d8"
+          paddingAngle={0}
+        >
+        	{
+          	data03.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
           }
         </Pie>
       </PieChart>
