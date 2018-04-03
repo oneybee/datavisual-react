@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Interactive from 'react-interactive';
 import { Link, Route } from 'react-router-dom';
-import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'Recharts';
+import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'Recharts';
 import { PieChart, Pie, Sector, Cell } from 'Recharts';
 import { log } from 'ruucm-util'
 
@@ -23,18 +23,26 @@ var obj = {
   },
 }
 
-
+const dataA = [
+      {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
+      {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
+      {name: 'Page C', uv: 2000, pv: 9800, amt: 2290},
+      {name: 'Page D', uv: 2780, pv: 3908, amt: 2000},
+      {name: 'Page E', uv: 1890, pv: 4800, amt: 2181},
+      {name: 'Page F', uv: 2390, pv: 3800, amt: 2500},
+      {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
+];
+var ary = [
+  {name: '2015', wins: 0},
+  {name: '2016', wins: 0},
+  {name: '2017', wins:0}
+];
 class HomeComponent extends Component {
-  
   constructor() {
     super()
     this.state = {
       data: [],
-      bayernWins: {
-        fifteen: 0,
-        sixteen: 0,
-        seventeen: 0,
-      },
+      bayernWins: ary,
     }
   }
   componentDidMount() {
@@ -43,32 +51,26 @@ class HomeComponent extends Component {
     fetch('http://api.football-data.org/v1/competitions/394/leagueTable',obj)
     .then((response) => response.json())
     .then((responseJson) => {
-      log('responseJson(394 - 2015) !!!', responseJson.standing[0].wins);
-      this.setState({bayernWins: {
-        fifteen: responseJson.standing[0].wins,
-        sixteen: this.state.bayernWins['sixteen'],
-        seventeen: this.state.bayernWins['seventeen'],
-      }})
+      ary[0] = {name: '2015',wins: responseJson.standing[0].wins}
+      this.setState({
+        bayernWins: ary,
+      });
     })
     fetch('http://api.football-data.org/v1/competitions/452/leagueTable',obj)
     .then((response) => response.json())
     .then((responseJson) => {
-      log('responseJson(452) !!!', responseJson);
-      this.setState({bayernWins: {
-        fifteen: this.state.bayernWins['fifteen'],
-        sixteen: responseJson.standing[0].wins,
-        seventeen: this.state.bayernWins['seventeen'],
-      }})
+      ary[1] = {name: '2016', wins: responseJson.standing[1].wins}
+      this.setState({
+        bayernWins: ary,
+      });
     })
     fetch('http://api.football-data.org/v1/competitions/430/leagueTable',obj)
     .then((response) => response.json())
     .then((responseJson) => {
-      log('responseJson(430) !!!', responseJson);
-      this.setState({bayernWins: {
-        fifteen: this.state.bayernWins['fifteen'],
-        sixteen: this.state.bayernWins['sixteen'],
-        seventeen: responseJson.standing[0].wins,
-      }})
+      ary[2] = {name: '2017', wins: responseJson.standing[2].wins}
+      this.setState({
+        bayernWins: ary,
+      });
     })
     fetch('http://api.football-data.org/v1/competitions/394/leagueTable',obj)
       .then((response) => response.json())
@@ -81,8 +83,7 @@ class HomeComponent extends Component {
             {name: 'Gladbach', goalsAgainst: responseJson.standing[3].goalsAgainst, goals: responseJson.standing[3].goals, wins: responseJson.standing[3].wins, draws: responseJson.standing[3].draws, losses: responseJson.standing[3].losses},
               ]
           })
-        this.setState( );
-        console.log(this.state.data)
+        this.setState();
       })
   }
   render() {
@@ -194,9 +195,6 @@ class HomeComponent extends Component {
         </div> 
         <div className="section-03">
           {log('this.state.bayernWins', this.state.bayernWins)}
-          {this.state.bayernWins['fifteen']}
-          {this.state.bayernWins['sixteen']}
-          {this.state.bayernWins['seventeen']}
           <a className="font">
             <div>
               <p>2015-2016</p>
@@ -204,17 +202,16 @@ class HomeComponent extends Component {
             </div>
             <p>시즌 분데스리가 상위 4팀 득점, 실점</p>
           </a>
-          <div className="custom_rechart">
-            <LineChart width={335} height={200} data={this.state.data}>
-            <XAxis dataKey="name" />
-            <YAxis/>
-            <CartesianGrid strokeDasharray="3 3"/>
+          {(this.state.bayernWins[0]['wins'] != 0 
+          && this.state.bayernWins[1]['wins'] != 0
+          && this.state.bayernWins[2]['wins'] != 0)? (
+          <AreaChart width={345} height={250} data={this.state.bayernWins}
+          margin={{top: 5, right: 0, left: 0, bottom: 5}}>
+            <XAxis dataKey="name"/>
             <Tooltip/>
-            <Legend />
-            <Line type="monotone" dataKey="goals" stroke="rgb(137, 166, 255)" />
-            <Line type="monotone" dataKey="goalsAgainst" stroke="rgb(255, 151, 134)" />
-            </LineChart>
-          </div>    
+            <Area type='monotone' dataKey='wins' stroke='#8884d8' fill='#8884d8' />
+          </AreaChart>
+        ):('loading...')}
         </div>
       </div>
     )
