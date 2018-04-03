@@ -999,20 +999,23 @@ p, span {
     font-size: 10px !important;
     font-weight: 700; }
 
-.section-03 {
-  margin-top: 45px; }
-  .section-03 .font {
-    font-size: 15px !important; }
-    .section-03 .font p {
-      margin-top: 15px; }
-  .section-03 .areachart {
-    margin-top: 30px; }
-    .section-03 .areachart .recharts-wrapper {
-      border-radius: 8px;
-      border: 1px solid #ebebeb; }
-    .section-03 .areachart .recharts-cartesian-axis-ticks {
-      display: none; }
-    .section-03 .areachart .xAxis {
-      display: none; }
+.wins-count {
+  padding: 0 20px;
+  padding-bottom: 140px; }
+  .wins-count .section-03 {
+    margin-top: 45px; }
+    .wins-count .section-03 .font {
+      font-size: 15px !important; }
+      .wins-count .section-03 .font p {
+        margin-top: 15px; }
+    .wins-count .section-03 .areachart {
+      margin-top: 30px; }
+      .wins-count .section-03 .areachart .recharts-wrapper {
+        border-radius: 8px;
+        border: 1px solid #ebebeb; }
+      .wins-count .section-03 .areachart .recharts-cartesian-axis-ticks {
+        display: none; }
+      .wins-count .section-03 .areachart .xAxis {
+        display: none; }
 
 /*# sourceMappingURL=style.css.map */
