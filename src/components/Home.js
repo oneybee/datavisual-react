@@ -5,15 +5,15 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'Rec
 import { PieChart, Pie, Sector, Cell } from 'Recharts';
 
 
-const data = [{name: 'golas', value: 80}, {name: 'goalsAgainst', value: 17},
+const data = [{name: 'wins', value: 28}, {name: 'losses', value: 2}, {name: 'draws', value:4}
                  ];
-const data01 = [{name: 'golas', value: 82}, {name: 'goalsAgainst', value: 34},
+const data01 = [{name: 'wins', value: 24}, {name: 'losses', value: 4},{name: 'draws', value:6}
                  ];
-const data02 = [{name: 'golas', value: 56}, {name: 'goalsAgainst', value: 40},
+const data02 = [{name: 'wins', value: 18}, {name: 'losses', value: 10},{name: 'draws', value:6}
                  ];
-const data03 = [{name: 'golas', value: 67}, {name: 'goalsAgainst', value: 50},
+const data03 = [{name: 'wins', value: 17}, {name: 'losses', value: 13},{name: 'draws', value:4}
                  ];                
-const COLORS = ['rgb(137, 166, 255)', 'rgb(255,151,134)'];
+const COLORS = ['rgb(137, 166, 255)', 'rgb(255,151,134)', 'rgb(235,235,235)'];
 
 
 var obj = {  
@@ -38,10 +38,10 @@ class HomeComponent extends Component {
       .then((responseJson) => {
         this.setState({
           data: [
-            {name: 'Bayern', goalsAgainst: responseJson.standing[0].goalsAgainst, goals: responseJson.standing[0].goals, amt: 2400},
-            {name: 'BVB', goalsAgainst: responseJson.standing[1].goalsAgainst, goals: responseJson.standing[1].goals, amt: 2210},
-            {name: 'Leverkusen', goalsAgainst: responseJson.standing[2].goalsAgainst, goals: responseJson.standing[2].goals, amt: 2290},
-            {name: 'Gladbach', goalsAgainst: responseJson.standing[3].goalsAgainst, goals: responseJson.standing[3].goals, amt: 2000},
+            {name: 'Bayern', goalsAgainst: responseJson.standing[0].goalsAgainst, goals: responseJson.standing[0].goals, wins: responseJson.standing[0].wins, draws: responseJson.standing[0].draws, losses: responseJson.standing[0].losses },
+            {name: 'BVB', goalsAgainst: responseJson.standing[1].goalsAgainst, goals: responseJson.standing[1].goals, wins: responseJson.standing[1].wins, draws: responseJson.standing[1].draws, losses: responseJson.standing[1].losses},
+            {name: 'Leverkusen', goalsAgainst: responseJson.standing[2].goalsAgainst, goals: responseJson.standing[2].goals, wins: responseJson.standing[2].wins, draws: responseJson.standing[2].draws, losses: responseJson.standing[2].losses},
+            {name: 'Gladbach', goalsAgainst: responseJson.standing[3].goalsAgainst, goals: responseJson.standing[3].goals, wins: responseJson.standing[3].wins, draws: responseJson.standing[3].draws, losses: responseJson.standing[3].losses},
               ]
           })
         this.setState( );
@@ -77,13 +77,14 @@ class HomeComponent extends Component {
         </div>
         <div className="section-02">          
           <h1> Users by Location </h1>
-        </div>  
+        </div> 
+          
         <PieChart width={375} height={85} onMouseEnter={this.onPieEnter}>
         <Pie
           data={data}
           cx={40} 
           cy={40} 
-          innerRadius={20}
+          innerRadius={25}
           outerRadius={30} 
           fill="#8884d8"
           paddingAngle={0}
@@ -98,13 +99,13 @@ class HomeComponent extends Component {
           data={data01} 
           cx={130} 
           cy={40} 
-          innerRadius={20}
+          innerRadius={25}
           outerRadius={30} 
           fill="#8884d8"
           paddingAngle={0}
         >
         	{
-          	data01.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
+          	data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
           }
         </Pie>
           <text fontFamily='HiraginoSans-W3' x={135} y={50} textAnchor="middle" dominantBaselin="middle">
@@ -113,13 +114,13 @@ class HomeComponent extends Component {
           data={data02} 
           cx={220} 
           cy={40} 
-          innerRadius={20}
+          innerRadius={25}
           outerRadius={30} 
           fill="#8884d8"
           paddingAngle={0}
         >
         	{
-          	data02.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
+          	data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
           }
         </Pie>
           <text fontFamily='HiraginoSans-W3' x={225} y={50} textAnchor="middle" dominantBaselin="middle">
@@ -128,13 +129,13 @@ class HomeComponent extends Component {
           data={data03} 
           cx={310} 
           cy={40} 
-          innerRadius={20}
+          innerRadius={25}
           outerRadius={30} 
           fill="#8884d8"
           paddingAngle={0}
         >
         	{
-          	data03.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
+          	data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
           }
         </Pie>
           <text fontFamily='HiraginoSans-W3' x={315} y={50} textAnchor="middle" dominantBaselin="middle">
