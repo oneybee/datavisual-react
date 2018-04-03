@@ -124,7 +124,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text fontFamily='HiraginoSans-W3' className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
                 Bayern </text>
               </PieChart>
             </div>
@@ -145,7 +145,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text fontFamily='HiraginoSans-W3' className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
                 BVB </text>
               </PieChart>
             </div>
@@ -166,7 +166,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text fontFamily='HiraginoSans-W3' className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
                 Leverkusen </text>
               </PieChart>
             </div>
@@ -187,7 +187,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text fontFamily='HiraginoSans-W3' className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
                 Gladbach </text>
               </PieChart>
             </div>

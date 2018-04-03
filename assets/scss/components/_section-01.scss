@@ -28,9 +28,13 @@
     }
     .item-01 {
         background: url('../../assets/images/box-color-01.png');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     .item-02 {
         background: url('../../assets/images/box-color-02.png');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     .item-03 {
         background: url('../../assets/images/box-color-03.png');
