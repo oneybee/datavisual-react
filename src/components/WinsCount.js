@@ -51,7 +51,7 @@ class WinsCountComponent extends Component {
   }
   render() {
     return (
-      <div className="home">
+      <div className="wins-count">
         <InfoBannerComponent />
         <div className="section-03">
           <a className="font">

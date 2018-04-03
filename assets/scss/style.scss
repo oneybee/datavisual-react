@@ -39,8 +39,9 @@ $enable-grid-classes:       true;
 @import 'components/headicon';
 @import 'components/info-banner';
 
-// Sections
-@import 'components/section-02';
-@import 'components/section-03';
+// Pages
+@import 'components/home';
+@import 'components/wins-count';
+@import 'components/about';
 
 
