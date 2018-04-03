@@ -48,7 +48,7 @@ class HomeComponent extends Component {
   componentDidMount() {
 
     // right values
-    fetch('http://api.football-data.org/v1/competitions/394/leagueTable',obj)
+    fetch('https://api.football-data.org/v1/competitions/394/leagueTable',obj)
     .then((response) => response.json())
     .then((responseJson) => {
       ary[0] = {name: '2015-2016',wins: responseJson.standing[0].wins}
@@ -56,7 +56,7 @@ class HomeComponent extends Component {
         bayernWins: ary,
       });
     })
-    fetch('http://api.football-data.org/v1/competitions/452/leagueTable',obj)
+    fetch('https://api.football-data.org/v1/competitions/452/leagueTable',obj)
     .then((response) => response.json())
     .then((responseJson) => {
       ary[1] = {name: '2016-2017', wins: responseJson.standing[1].wins}
@@ -64,7 +64,7 @@ class HomeComponent extends Component {
         bayernWins: ary,
       });
     })
-    fetch('http://api.football-data.org/v1/competitions/430/leagueTable',obj)
+    fetch('https://api.football-data.org/v1/competitions/430/leagueTable',obj)
     .then((response) => response.json())
     .then((responseJson) => {
       ary[2] = {name: '2017-2018', wins: responseJson.standing[2].wins}
@@ -72,7 +72,7 @@ class HomeComponent extends Component {
         bayernWins: ary,
       });
     })
-    fetch('http://api.football-data.org/v1/competitions/394/leagueTable',obj)
+    fetch('https://api.football-data.org/v1/competitions/394/leagueTable',obj)
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
@@ -89,8 +89,8 @@ class HomeComponent extends Component {
   render() {
     return (
       <div className="home">
-        <a className="h"><p>2015-2016 분데스리가</p></a>
         <div className="section-01">
+          <a className="section-title"><p>2015-2016 분데스리가</p></a>
           <div className="item item-01">
             <div className="item-inner">
               <h1>15-16</h1>

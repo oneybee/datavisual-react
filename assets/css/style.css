@@ -36,66 +36,6 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/**
- *  Default Fonts
- */
-@font-face {
-  font-family: 'NanumSquare';
-  font-style: normal;
-  font-weight: 100;
-  src: local("NanumSquare"), url("../fonts/NanumSquare/NanumSquareLight.woff2") format("woff2"), url("../fonts/NanumSquare/NanumSquareLight.woff") format("woff"), url("../fonts/NanumSquare/NanumSquareLight.ttf") format("truetype"), url("../fonts/NanumSquare/NanumSquareLight.eot?#iefix") format("embedded-opentype"); }
-@font-face {
-  font-family: 'NanumSquare';
-  font-style: normal;
-  font-weight: 400;
-  src: local("NanumSquare"), url("../fonts/NanumSquare/NanumSquareRegular.woff2") format("woff2"), url("../fonts/NanumSquare/NanumSquareRegular.woff") format("woff"), url("../fonts/NanumSquare/NanumSquareRegular.ttf") format("truetype"), url("../fonts/NanumSquare/NanumSquareRegular.eot?#iefix") format("embedded-opentype"); }
-@font-face {
-  font-family: 'NanumSquare';
-  font-style: normal;
-  font-weight: 700;
-  src: local("NanumSquare"), url("../fonts/NanumSquare/NanumSquareBold.woff2") format("woff2"), url("../fonts/NanumSquare/NanumSquareBold.woff") format("woff"), url("../fonts/NanumSquare/NanumSquareBold.ttf") format("truetype"), url("../fonts/NanumSquare/NanumSquareBold.eot?#iefix") format("embedded-opentype"); }
-@font-face {
-  font-family: 'NanumSquare';
-  font-style: normal;
-  font-weight: 900;
-  src: local("NanumSquare"), url("../fonts/NanumSquare/NanumSquareExtraBold.woff2") format("woff2"), url("../fonts/NanumSquare/NanumSquareExtraBold.woff") format("woff"), url("../fonts/NanumSquare/NanumSquareExtraBold.ttf") format("truetype"), url("../fonts/NanumSquare/NanumSquareExtraBold.eot?#iefix") format("embedded-opentype"); }
-/**
- *	Icons
- */
-@font-face {
-  font-family: 'chief-mate';
-  src: url("../fonts/chief-mate.eot?55s73y");
-  src: url("../fonts/chief-mate.eot?55s73y#iefix") format("embedded-opentype"), url("../fonts/chief-mate.ttf?55s73y") format("truetype"), url("../fonts/chief-mate.woff?55s73y") format("woff"), url("../fonts/chief-mate.svg?55s73y#chief-mate") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-.chief-mate {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'chief-mate' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.chief-mate-user:before {
-  content: "\e904"; }
-
-.chief-mate-bar-graph:before {
-  content: "\e900"; }
-
-.chief-mate-circular-graph:before {
-  content: "\e901"; }
-
-.chief-mate-github:before {
-  content: "\e902"; }
-
-.chief-mate-menu:before {
-  content: "\e903"; }
-
 .container {
   width: 100%;
   padding-right: 15px;
@@ -840,6 +780,66 @@ body {
 
   .offset-xl-11 {
     margin-left: 91.6666666667%; } }
+/**
+ *  Default Fonts
+ */
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/NanumSquare/NanumSquareLight.woff2") format("woff2"), url("../fonts/NanumSquare/NanumSquareLight.woff") format("woff"), url("../fonts/NanumSquare/NanumSquareLight.ttf") format("truetype"), url("../fonts/NanumSquare/NanumSquareLight.eot?#iefix") format("embedded-opentype"); }
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NanumSquare/NanumSquareRegular.woff2") format("woff2"), url("../fonts/NanumSquare/NanumSquareRegular.woff") format("woff"), url("../fonts/NanumSquare/NanumSquareRegular.ttf") format("truetype"), url("../fonts/NanumSquare/NanumSquareRegular.eot?#iefix") format("embedded-opentype"); }
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/NanumSquare/NanumSquareBold.woff2") format("woff2"), url("../fonts/NanumSquare/NanumSquareBold.woff") format("woff"), url("../fonts/NanumSquare/NanumSquareBold.ttf") format("truetype"), url("../fonts/NanumSquare/NanumSquareBold.eot?#iefix") format("embedded-opentype"); }
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/NanumSquare/NanumSquareExtraBold.woff2") format("woff2"), url("../fonts/NanumSquare/NanumSquareExtraBold.woff") format("woff"), url("../fonts/NanumSquare/NanumSquareExtraBold.ttf") format("truetype"), url("../fonts/NanumSquare/NanumSquareExtraBold.eot?#iefix") format("embedded-opentype"); }
+/**
+ *	Icons
+ */
+@font-face {
+  font-family: 'chief-mate';
+  src: url("../fonts/chief-mate.eot?55s73y");
+  src: url("../fonts/chief-mate.eot?55s73y#iefix") format("embedded-opentype"), url("../fonts/chief-mate.ttf?55s73y") format("truetype"), url("../fonts/chief-mate.woff?55s73y") format("woff"), url("../fonts/chief-mate.svg?55s73y#chief-mate") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.chief-mate {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'chief-mate' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.chief-mate-user:before {
+  content: "\e904"; }
+
+.chief-mate-bar-graph:before {
+  content: "\e900"; }
+
+.chief-mate-circular-graph:before {
+  content: "\e901"; }
+
+.chief-mate-github:before {
+  content: "\e902"; }
+
+.chief-mate-menu:before {
+  content: "\e903"; }
+
 #root {
   max-width: 375px;
   margin: 0 auto;
@@ -912,10 +912,6 @@ p, span {
     .bottom-nav a:hover {
       color: #ff9786; }
 
-.h {
-  position: relative;
-  font-size: 24pt; }
-
 .headicon {
   position: relative;
   top: 20pt;
@@ -924,6 +920,10 @@ p, span {
 .section-01 {
   margin-top: 30px;
   font-family: "Hiraginosans-W6"; }
+  .section-01 .section-title {
+    position: relative;
+    font-size: 24pt;
+    font-weight: 900; }
   .section-01 .item {
     display: inline-block;
     background-repeat: no-repeat;
@@ -955,7 +955,8 @@ p, span {
   .section-01 .item-01 {
     background: url("../../assets/images/box-color-01.png");
     background-size: contain;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    margin-top: 30px; }
   .section-01 .item-02 {
     background: url("../../assets/images/box-color-02.png");
     background-size: contain;

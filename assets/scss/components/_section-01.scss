@@ -1,7 +1,11 @@
 .section-01 {
     margin-top: 30px;
     font-family: 'Hiraginosans-W6',;
-
+    .section-title {
+        position: relative;
+        font-size: 24pt;
+        font-weight: 900;
+     }    
     .item {
         display: inline-block;
         background-repeat: no-repeat;
@@ -30,6 +34,7 @@
         background: url('../../assets/images/box-color-01.png');
         background-size: contain;
         background-repeat: no-repeat;
+        margin-top: 30px;
     }
     .item-02 {
         background: url('../../assets/images/box-color-02.png');

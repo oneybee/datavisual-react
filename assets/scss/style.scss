@@ -23,7 +23,6 @@
 $enable-flex:               true;
 $enable-grid-classes:       true;
 
-@import 'base/fonts';
 
 
 @import 'ruucm/bootstrap/scss/functions';
@@ -31,11 +30,12 @@ $enable-grid-classes:       true;
 @import 'ruucm/bootstrap/scss/mixins';
 @import 'ruucm/bootstrap/scss/grid';
 
+
+@import 'base/fonts';
+
 @import 'app';
 @import 'components/header';
 @import 'components/bottom-nav';
-// @import 'components/custom-rechart';
-@import 'components/analytics';
 @import 'components/headicon';
 
 // Sections
