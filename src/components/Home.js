@@ -30,10 +30,47 @@ class HomeComponent extends Component {
     super()
     this.state = {
       data: [],
+      bayernWins: {
+        fifteen: 0,
+        sixteen: 0,
+        seventeen: 0,
+      },
     }
   }
   componentDidMount() {
-    return fetch('http://api.football-data.org/v1/competitions/394/leagueTable',obj)
+
+    // right values
+    fetch('http://api.football-data.org/v1/competitions/394/leagueTable',obj)
+    .then((response) => response.json())
+    .then((responseJson) => {
+      log('responseJson(394 - 2015) !!!', responseJson.standing[0].wins);
+      this.setState({bayernWins: {
+        fifteen: responseJson.standing[0].wins,
+        sixteen: this.state.bayernWins['sixteen'],
+        seventeen: this.state.bayernWins['seventeen'],
+      }})
+    })
+    fetch('http://api.football-data.org/v1/competitions/452/leagueTable',obj)
+    .then((response) => response.json())
+    .then((responseJson) => {
+      log('responseJson(452) !!!', responseJson);
+      this.setState({bayernWins: {
+        fifteen: this.state.bayernWins['fifteen'],
+        sixteen: responseJson.standing[0].wins,
+        seventeen: this.state.bayernWins['seventeen'],
+      }})
+    })
+    fetch('http://api.football-data.org/v1/competitions/430/leagueTable',obj)
+    .then((response) => response.json())
+    .then((responseJson) => {
+      log('responseJson(430) !!!', responseJson);
+      this.setState({bayernWins: {
+        fifteen: this.state.bayernWins['fifteen'],
+        sixteen: this.state.bayernWins['sixteen'],
+        seventeen: responseJson.standing[0].wins,
+      }})
+    })
+    fetch('http://api.football-data.org/v1/competitions/394/leagueTable',obj)
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
@@ -47,7 +84,7 @@ class HomeComponent extends Component {
         this.setState( );
         console.log(this.state.data)
       })
-    }
+  }
   render() {
     return (
       <div className="home">
@@ -68,7 +105,6 @@ class HomeComponent extends Component {
         </div>
         <div className="section-02">          
           <h1> Users by Location </h1>
-          {log('data', data)}
           <div className="row piechart-text-label-wrapper">
             <div className="col-3">
               <span className="piechart-text-label"><div className="label-point win"></div>{data[0]['value']}</span>
@@ -156,27 +192,30 @@ class HomeComponent extends Component {
             </div>
           </div>
         </div> 
-          
-
-        <div className="section-03"> <a className="font"><p>2015-2016 시즌 분데스리가 상위 4팀 득점, 실점</p></a> </div>
-        <div className="custom_rechart">
-          <LineChart width={335} height={200} data={this.state.data}>
-          <XAxis dataKey="name" />
-          <YAxis/>
-          <CartesianGrid strokeDasharray="3 3"/>
-          <Tooltip/>
-          <Legend />
-          <Line type="monotone" dataKey="goals" stroke="rgb(137, 166, 255)" />
-          <Line type="monotone" dataKey="goalsAgainst" stroke="rgb(255, 151, 134)" />
-          </LineChart>
+        <div className="section-03">
+          {log('this.state.bayernWins', this.state.bayernWins)}
+          {this.state.bayernWins['fifteen']}
+          {this.state.bayernWins['sixteen']}
+          {this.state.bayernWins['seventeen']}
+          <a className="font">
+            <div>
+              <p>2015-2016</p>
+              <span className="piechart-text-label"><div className="label-point win"></div></span>
+            </div>
+            <p>시즌 분데스리가 상위 4팀 득점, 실점</p>
+          </a>
+          <div className="custom_rechart">
+            <LineChart width={335} height={200} data={this.state.data}>
+            <XAxis dataKey="name" />
+            <YAxis/>
+            <CartesianGrid strokeDasharray="3 3"/>
+            <Tooltip/>
+            <Legend />
+            <Line type="monotone" dataKey="goals" stroke="rgb(137, 166, 255)" />
+            <Line type="monotone" dataKey="goalsAgainst" stroke="rgb(255, 151, 134)" />
+            </LineChart>
+          </div>    
         </div>
-        {
-          this.state.data.map( (dynamicData,key)=>
-          <div key={key}>
-            {console.log('dynamicData', dynamicData)}
-          </div>
-          )
-        }      
       </div>
     )
   }
