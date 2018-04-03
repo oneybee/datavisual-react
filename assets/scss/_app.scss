@@ -1,5 +1,6 @@
 #root {
     max-width: 375px;
+    min-height: 500px;
     margin: 0 auto;
     -webkit-box-shadow: 0px 10px 52px 0px rgba(16,32,209,1);
     -moz-box-shadow: 0px 10px 52px 0px rgba(16,32,209,1);
@@ -10,7 +11,6 @@
 
 .home {
     padding: 0 20px;
-    height: 730px;
 }
 * {
     font-family: 'NanumSquare';
