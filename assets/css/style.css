@@ -971,18 +971,18 @@ p, span {
 
 .section-02 {
   margin-top: 45px;
-  font-size: 15px; }
+  font-size: 16px; }
   .section-02 .recharts-wrapper {
     position: relative;
     right: 20px; }
   .section-02 .piechart-text-label-wrapper {
     margin-top: 25px; }
     .section-02 .piechart-text-label-wrapper .piechart-text-label {
-      font-size: 5px;
+      font-size: 7px;
       margin-right: 10px; }
     .section-02 .piechart-text-label-wrapper .label-point {
-      width: 6px;
-      height: 6px;
+      width: 7px;
+      height: 7px;
       display: inline-block;
       border-radius: 30px;
       margin-right: 5px; }
@@ -991,13 +991,13 @@ p, span {
       .section-02 .piechart-text-label-wrapper .label-point.loss {
         background: #ff9786; }
   .section-02 .piechart-label {
-    font-size: 10px !important;
+    font-size: 12px !important;
     font-weight: 700; }
 
 .section-03 {
   margin-top: 45px; }
   .section-03 .font {
-    font-size: 15px !important; }
+    font-size: 16px !important; }
     .section-03 .font p {
       margin-top: 15px; }
   .section-03 .areachart {

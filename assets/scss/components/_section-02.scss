@@ -1,6 +1,6 @@
 .section-02 {
     margin-top: 45px;
-    font-size: 15px;
+    font-size: 16px;
     .recharts-wrapper {
         position: relative;
         right: 20px;
@@ -8,12 +8,12 @@
     .piechart-text-label-wrapper {
         margin-top: 25px;
         .piechart-text-label {
-            font-size: 5px;
+            font-size: 7px;
             margin-right: 10px;
         }
         .label-point {
-            width: 6px;
-            height: 6px;
+            width: 7px;
+            height: 7px;
             display: inline-block;
             border-radius: 30px;
             margin-right: 5px;
@@ -26,7 +26,7 @@
         }
     }
     .piechart-label {
-        font-size: 10px !important;
+        font-size: 12px !important;
         font-weight: 700;
     }
 }
