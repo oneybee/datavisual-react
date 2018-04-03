@@ -1,29 +1,30 @@
 import React, {component} from 'react';
+import { Link, Route } from 'react-router-dom';
 
 export default function BottomNavCompoonent() {
   return (
       <div id="blogmenu" className="bottom-nav">
         <div className="row">
           <div className="col-3">
-            <a href="#">
+            <Link to='about'>
               <span className="chief-mate chief-mate-user"></span>
               <p>About</p>
-            </a>
+            </Link>
           </div>
           <div className="col-3">
-            <a href="#">
+            <Link to='/'>
               <span className="chief-mate chief-mate-bar-graph"></span>
               <p>골득실</p>
-            </a>
+            </Link>
           </div>
           <div className="col-3">
-            <a href="#">
+            <Link to='wins'>
               <span className="chief-mate chief-mate-circular-graph"></span>
               <p>승리횟수</p>
-            </a>
+            </Link>
           </div>
           <div className="col-3">
-            <a href="#">
+            <a href="https://github.com/oneybee/datavisual-react">
               <span className="chief-mate chief-mate-github"></span>
               <p>Github</p>
             </a>
