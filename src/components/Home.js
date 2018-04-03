@@ -89,21 +89,6 @@ class HomeComponent extends Component {
   render() {
     return (
       <div className="home">
-        <div className="section-01">
-          <a className="section-title"><p>2015-2016 분데스리가</p></a>
-          <div className="item item-01">
-            <div className="item-inner">
-              <h1>15-16</h1>
-              <p>리그 34경기</p>
-            </div>
-          </div>
-          <div className="item item-02">
-            <div className="item-inner">
-              <h1>챔피언</h1>
-              <p>Bayern</p>
-            </div>
-          </div>
-        </div>
         <div className="section-02">          
           <h1> 15-16 분데스리가 팀별 승리, 패배 횟수 </h1>
           <div className="row piechart-text-label-wrapper">
