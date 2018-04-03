@@ -33,9 +33,9 @@ const dataA = [
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
 var ary = [
-  {name: '2015', wins: 0},
-  {name: '2016', wins: 0},
-  {name: '2017', wins:0}
+  {name: '2015-2016', wins: 0},
+  {name: '2016-2017', wins: 0},
+  {name: '2017-2018', wins:0}
 ];
 class HomeComponent extends Component {
   constructor() {
@@ -51,7 +51,7 @@ class HomeComponent extends Component {
     fetch('http://api.football-data.org/v1/competitions/394/leagueTable',obj)
     .then((response) => response.json())
     .then((responseJson) => {
-      ary[0] = {name: '2015',wins: responseJson.standing[0].wins}
+      ary[0] = {name: '2015-2016',wins: responseJson.standing[0].wins}
       this.setState({
         bayernWins: ary,
       });
@@ -59,7 +59,7 @@ class HomeComponent extends Component {
     fetch('http://api.football-data.org/v1/competitions/452/leagueTable',obj)
     .then((response) => response.json())
     .then((responseJson) => {
-      ary[1] = {name: '2016', wins: responseJson.standing[1].wins}
+      ary[1] = {name: '2016-2017', wins: responseJson.standing[1].wins}
       this.setState({
         bayernWins: ary,
       });
@@ -67,7 +67,7 @@ class HomeComponent extends Component {
     fetch('http://api.football-data.org/v1/competitions/430/leagueTable',obj)
     .then((response) => response.json())
     .then((responseJson) => {
-      ary[2] = {name: '2017', wins: responseJson.standing[2].wins}
+      ary[2] = {name: '2017-2018', wins: responseJson.standing[2].wins}
       this.setState({
         bayernWins: ary,
       });
@@ -89,23 +89,23 @@ class HomeComponent extends Component {
   render() {
     return (
       <div className="home">
-        <a className="h"><p>Analytics</p></a>
+        <a className="h"><p>2015-2016 분데스리가</p></a>
         <div className="section-01">
           <div className="item item-01">
             <div className="item-inner">
-              <h1>25</h1>
-              <p>Active User</p>
+              <h1>15-16</h1>
+              <p>리그 34경기</p>
             </div>
           </div>
           <div className="item item-02">
             <div className="item-inner">
-              <h1>25</h1>
-              <p>Active User</p>
+              <h1>챔피언</h1>
+              <p>Bayern</p>
             </div>
           </div>
         </div>
         <div className="section-02">          
-          <h1> Users by Location </h1>
+          <h1> 15-16 분데스리가 팀별 승리, 패배 횟수 </h1>
           <div className="row piechart-text-label-wrapper">
             <div className="col-3">
               <span className="piechart-text-label"><div className="label-point win"></div>{data[0]['value']}</span>
@@ -197,16 +197,16 @@ class HomeComponent extends Component {
           {log('this.state.bayernWins', this.state.bayernWins)}
           <a className="font">
             <div>
-              <p>2015-2016</p>
+              <p>2015-2017</p>
               <span className="piechart-text-label"><div className="label-point win"></div></span>
             </div>
-            <p>시즌 분데스리가 상위 4팀 득점, 실점</p>
+            <p>바이에른뮌헨의 최근 리그 승리 횟수</p>
           </a>
           <div className="areachart">
               {(this.state.bayernWins[0]['wins'] != 0 
               && this.state.bayernWins[1]['wins'] != 0
               && this.state.bayernWins[2]['wins'] != 0)? (
-              <AreaChart width={345} height={250} data={this.state.bayernWins}
+              <AreaChart width={335} height={250} data={this.state.bayernWins}
               margin={{top: 5, right: 0, left: 0, bottom: 5}}>
                 <defs>
                   <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
