@@ -955,5 +955,16 @@ body {
   .section-03 .font {
     font-family: "HiraginoSans-W6";
     font-size: 15px !important; }
+    .section-03 .font p {
+      margin-top: 15px; }
+  .section-03 .areachart {
+    margin-top: 30px; }
+    .section-03 .areachart .recharts-wrapper {
+      border-radius: 8px;
+      border: 1px solid #ebebeb; }
+    .section-03 .areachart .recharts-cartesian-axis-ticks {
+      display: none; }
+    .section-03 .areachart .xAxis {
+      display: none; }
 
 /*# sourceMappingURL=style.css.map */

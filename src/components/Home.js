@@ -202,16 +202,44 @@ class HomeComponent extends Component {
             </div>
             <p>시즌 분데스리가 상위 4팀 득점, 실점</p>
           </a>
-          {(this.state.bayernWins[0]['wins'] != 0 
-          && this.state.bayernWins[1]['wins'] != 0
-          && this.state.bayernWins[2]['wins'] != 0)? (
-          <AreaChart width={345} height={250} data={this.state.bayernWins}
-          margin={{top: 5, right: 0, left: 0, bottom: 5}}>
-            <XAxis dataKey="name"/>
-            <Tooltip/>
-            <Area type='monotone' dataKey='wins' stroke='#8884d8' fill='#8884d8' />
-          </AreaChart>
-        ):('loading...')}
+          <div className="areachart">
+              {(this.state.bayernWins[0]['wins'] != 0 
+              && this.state.bayernWins[1]['wins'] != 0
+              && this.state.bayernWins[2]['wins'] != 0)? (
+              <AreaChart width={345} height={250} data={this.state.bayernWins}
+              margin={{top: 5, right: 0, left: 0, bottom: 5}}>
+                <defs>
+                  <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="rgb(137, 166, 255)" stopOpacity={0.1}/>
+                    <stop offset="95%" stopColor="rgb(137, 166, 255)" stopOpacity={0.4}/>
+                  </linearGradient>
+                </defs>
+                <XAxis dataKey="name"/>
+                <Tooltip/>
+                <Area type='monotone' dataKey='wins' stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+              </AreaChart>
+            ):('loading...')}
+
+{/* <AreaChart width={730} height={250} data={data}
+  margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+  <defs>
+    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
+      <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
+    </linearGradient>
+    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
+      <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
+    </linearGradient>
+  </defs>
+  <XAxis dataKey="name" />
+  <YAxis />
+  <CartesianGrid strokeDasharray="3 3" />
+  <Tooltip />
+  <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+  <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
+</AreaChart> */}
+          </div>
         </div>
       </div>
     )
