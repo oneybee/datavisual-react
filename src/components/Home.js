@@ -3,7 +3,7 @@ import Interactive from 'react-interactive';
 import { Link, Route } from 'react-router-dom';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'Recharts';
 import { PieChart, Pie, Sector, Cell } from 'Recharts';
-
+import { log } from 'ruucm-util'
 
 const data = [{name: 'wins', value: 28}, {name: 'losses', value: 2}, {name: 'draws', value:4}
                  ];
@@ -53,7 +53,6 @@ class HomeComponent extends Component {
       <div className="home">
         <a className="h"><p>Analytics</p></a>
         <div className="section-01">
-          {/* <img src="box.png"/> */}
           <div className="item item-01">
             <div className="item-inner">
               <h1>25</h1>
@@ -66,81 +65,99 @@ class HomeComponent extends Component {
               <p>Active User</p>
             </div>
           </div>
-          {/* <div className="item item-03">
-            <h1>25</h1>
-            <p>Active User</p>
-          </div>
-          <div className="item item-04">
-            <h1>25</h1>
-            <p>Active User</p>
-          </div> */}
         </div>
         <div className="section-02">          
           <h1> Users by Location </h1>
+          {log('data', data)}
+          <div className="row piechart-text-label-wrapper">
+            <div className="col-3">
+              <span className="piechart-text-label"><div className="label-point win"></div>{data[0]['value']}</span>
+              <span className="piechart-text-label"><div className="label-point loss"></div>{data[1]['value']}</span>
+              <PieChart width={85} height={85}>
+                <Pie
+                  data={data}
+                  cx={40} 
+                  cy={40} 
+                  innerRadius={24}
+                  outerRadius={30} 
+                  fill="#8884d8"
+                  paddingAngle={0}
+                >
+                  {
+                    data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
+                  }
+                </Pie>
+                <text fontFamily='HiraginoSans-W3' className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                Bayern </text>
+              </PieChart>
+            </div>
+            <div className="col-3">
+              <span className="piechart-text-label"><div className="label-point win"></div>{data01[0]['value']}</span>
+              <span className="piechart-text-label"><div className="label-point loss"></div>{data01[1]['value']}</span>
+              <PieChart width={93} height={85}>
+                <Pie
+                  data={data01}
+                  cx={40} 
+                  cy={40} 
+                  innerRadius={24}
+                  outerRadius={30} 
+                  fill="#8884d8"
+                  paddingAngle={0}
+                >
+                  {
+                    data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
+                  }
+                </Pie>
+                <text fontFamily='HiraginoSans-W3' className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                BVB </text>
+              </PieChart>
+            </div>
+            <div className="col-3">
+              <span className="piechart-text-label"><div className="label-point win"></div>{data02[0]['value']}</span>
+              <span className="piechart-text-label"><div className="label-point loss"></div>{data02[1]['value']}</span>
+              <PieChart width={93} height={85}>
+                <Pie
+                  data={data02}
+                  cx={40} 
+                  cy={40} 
+                  innerRadius={24}
+                  outerRadius={30} 
+                  fill="#8884d8"
+                  paddingAngle={0}
+                >
+                  {
+                    data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
+                  }
+                </Pie>
+                <text fontFamily='HiraginoSans-W3' className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                Leverkusen </text>
+              </PieChart>
+            </div>
+            <div className="col-3">
+              <span className="piechart-text-label"><div className="label-point win"></div>{data03[0]['value']}</span>
+              <span className="piechart-text-label"><div className="label-point loss"></div>{data03[1]['value']}</span>
+              <PieChart width={93} height={85}>
+                <Pie
+                  data={data03}
+                  cx={40} 
+                  cy={40} 
+                  innerRadius={24}
+                  outerRadius={30} 
+                  fill="#8884d8"
+                  paddingAngle={0}
+                >
+                  {
+                    data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
+                  }
+                </Pie>
+                <text fontFamily='HiraginoSans-W3' className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                Gladbach </text>
+              </PieChart>
+            </div>
+          </div>
         </div> 
           
-        <PieChart width={375} height={85} onMouseEnter={this.onPieEnter}>
-        <Pie
-          data={data}
-          cx={40} 
-          cy={40} 
-          innerRadius={25}
-          outerRadius={30} 
-          fill="#8884d8"
-          paddingAngle={0}
-        >
-        	{
-          	data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
-          }
-        </Pie>
-          <text fontFamily='HiraginoSans-W3' x={45} y={50} textAnchor="middle" dominantBaselin="middle">
-          Bayern </text>
-        <Pie
-          data={data01} 
-          cx={130} 
-          cy={40} 
-          innerRadius={25}
-          outerRadius={30} 
-          fill="#8884d8"
-          paddingAngle={0}
-        >
-        	{
-          	data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
-          }
-        </Pie>
-          <text fontFamily='HiraginoSans-W3' x={135} y={50} textAnchor="middle" dominantBaselin="middle">
-          BVB </text>
-        <Pie
-          data={data02} 
-          cx={220} 
-          cy={40} 
-          innerRadius={25}
-          outerRadius={30} 
-          fill="#8884d8"
-          paddingAngle={0}
-        >
-        	{
-          	data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
-          }
-        </Pie>
-          <text fontFamily='HiraginoSans-W3' x={225} y={50} textAnchor="middle" dominantBaselin="middle">
-          Leverkusen </text>
-        <Pie
-          data={data03} 
-          cx={310} 
-          cy={40} 
-          innerRadius={25}
-          outerRadius={30} 
-          fill="#8884d8"
-          paddingAngle={0}
-        >
-        	{
-          	data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
-          }
-        </Pie>
-          <text fontFamily='HiraginoSans-W3' x={315} y={50} textAnchor="middle" dominantBaselin="middle">
-          Gladbach </text>
-      </PieChart>
+
         <div className="section-03"> <a className="font"><p>2015-2016 시즌 분데스리가 상위 4팀 득점, 실점</p></a> </div>
         <div className="custom_rechart">
           <LineChart width={335} height={200} data={this.state.data}>

@@ -13,6 +13,7 @@
             text-align: center;
             @include center(xy);
             position: absolute;
+            width: 100%;
         }
         h1 {
             color: white;
@@ -21,6 +22,8 @@
         p {
             color: white;
             font-size: 15px;
+            font-weight: 100;
+            margin-top: 10px;
         }
     }
     .item-01 {
