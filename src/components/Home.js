@@ -92,6 +92,8 @@ class HomeComponent extends Component {
           	data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
           }
         </Pie>
+          <text fontFamily='HiraginoSans-W3' x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+          Bayern </text>
         <Pie
           data={data01} 
           cx={130} 
@@ -105,6 +107,8 @@ class HomeComponent extends Component {
           	data01.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
           }
         </Pie>
+          <text fontFamily='HiraginoSans-W3' x={135} y={50} textAnchor="middle" dominantBaselin="middle">
+          BVB </text>
         <Pie
           data={data02} 
           cx={220} 
@@ -118,6 +122,8 @@ class HomeComponent extends Component {
           	data02.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
           }
         </Pie>
+          <text fontFamily='HiraginoSans-W3' x={225} y={50} textAnchor="middle" dominantBaselin="middle">
+          Leverkusen </text>
         <Pie
           data={data03} 
           cx={310} 
@@ -131,6 +137,8 @@ class HomeComponent extends Component {
           	data03.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
           }
         </Pie>
+          <text fontFamily='HiraginoSans-W3' x={315} y={50} textAnchor="middle" dominantBaselin="middle">
+          Gladbach </text>
       </PieChart>
         <div className="section-03"> <a className="font"><p>2015-2016 시즌 분데스리가 상위 4팀 득점, 실점</p></a> </div>
         <div className="custom_rechart">
