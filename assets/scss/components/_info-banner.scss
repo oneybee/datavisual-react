@@ -1,0 +1,49 @@
+.info-banner {
+  margin-top: 30px;
+  .section-title {
+      position: relative;
+      font-size: 24pt;
+      font-weight: 900;
+   }    
+  .item {
+      display: inline-block;
+      background-repeat: no-repeat;
+      height: 90px;
+      width: 147px;
+      margin-right: 12px;
+      position: relative;
+      .item-inner {
+          text-align: center;
+          @include center(xy);
+          position: absolute;
+          width: 100%;
+      }
+      h1 {
+          color: white;
+          font-size: 25px;
+      }
+      p {
+          color: white;
+          font-size: 15px;
+          font-weight: 100;
+          margin-top: 10px;
+      }
+  }
+  .item-01 {
+      background: url('../../assets/images/box-color-01.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-top: 30px;
+  }
+  .item-02 {
+      background: url('../../assets/images/box-color-02.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+  .item-03 {
+      background: url('../../assets/images/box-color-03.png');
+  }
+  .item-04 {
+      background: url('../../assets/images/box-color-04.png');
+  }
+}
