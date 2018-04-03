@@ -19,7 +19,7 @@ export default function BottomNavCompoonent() {
           <div className="col-3">
             <a href="#">
               <span className="chief-mate chief-mate-circular-graph"></span>
-              <p>입력정보</p>
+              <p>승리횟수</p>
             </a>
           </div>
           <div className="col-3">
