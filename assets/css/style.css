@@ -1018,4 +1018,12 @@ p, span {
       .wins-count .section-03 .areachart .xAxis {
         display: none; }
 
+.about {
+  padding: 0 20px; }
+  .about h1 {
+    font-size: 24pt;
+    font-weight: 900; }
+  .about p {
+    margin-top: 15px; }
+
 /*# sourceMappingURL=style.css.map */
