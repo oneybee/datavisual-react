@@ -132,7 +132,7 @@ class HomeComponent extends Component {
           }
         </Pie>
       </PieChart>
-        <div className="section-03"> <a class="font"><p>2015-2016 시즌 분데스리가 상위 4팀 득점, 실점</p></a> </div>
+        <div className="section-03"> <a className="font"><p>2015-2016 시즌 분데스리가 상위 4팀 득점, 실점</p></a> </div>
         <div className="custom_rechart">
           <LineChart width={335} height={200} data={this.state.data}>
           <XAxis dataKey="name" />
