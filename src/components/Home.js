@@ -79,7 +79,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle">
                 Bayern </text>
               </PieChart>
             </div>
@@ -101,7 +101,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle">
                 BVB </text>
               </PieChart>
             </div>
@@ -123,7 +123,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle">
                 Leverkusen </text>
               </PieChart>
             </div>
@@ -145,7 +145,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle">
                 Gladbach </text>
               </PieChart>
             </div>
