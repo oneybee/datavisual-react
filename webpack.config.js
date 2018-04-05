@@ -37,7 +37,10 @@ module.exports = {
       {
         test: /\.(png|jpeg|jpg|gif|woff|woff2|eot|ttf|svg)$/,
         use: [
-         { loader: 'url-loader', options: { limit: 8192 } } 
+         { loader: 'url-loader', options: { 
+           limit: 8192,
+           name: 'datavisual-react/[name].[hash:7].[ext]'
+          } } 
          // limit => file.size =< 8192 bytes ? DataURI : File
         ]
       },
