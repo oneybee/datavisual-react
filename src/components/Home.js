@@ -66,6 +66,7 @@ class HomeComponent extends Component {
               <span className="piechart-text-label"><div className="label-point loss"></div>{data[1]['value']}</span>
               <PieChart width={85} height={85}>
                 <Pie
+                  dataKey="value"
                   data={data}
                   cx={40} 
                   cy={40} 
@@ -87,6 +88,7 @@ class HomeComponent extends Component {
               <span className="piechart-text-label"><div className="label-point loss"></div>{data01[1]['value']}</span>
               <PieChart width={93} height={85}>
                 <Pie
+                  dataKey="value"
                   data={data01}
                   cx={40} 
                   cy={40} 
@@ -108,6 +110,7 @@ class HomeComponent extends Component {
               <span className="piechart-text-label"><div className="label-point loss"></div>{data02[1]['value']}</span>
               <PieChart width={93} height={85}>
                 <Pie
+                  dataKey="value"
                   data={data02}
                   cx={40} 
                   cy={40} 
@@ -129,6 +132,7 @@ class HomeComponent extends Component {
               <span className="piechart-text-label"><div className="label-point loss"></div>{data03[1]['value']}</span>
               <PieChart width={93} height={85}>
                 <Pie
+                  dataKey="value"
                   data={data03}
                   cx={40} 
                   cy={40} 
