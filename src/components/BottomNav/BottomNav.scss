@@ -27,5 +27,33 @@
             color: rgb(255, 151, 134);
         }
     }
+}
 
+// Active Link Highlight
+.about + .bottom-nav {
+    .col-3 {
+        &:nth-child(1) {
+            a {
+                color: rgb(255, 151, 134); 
+            }
+        }
+    }
+}
+.home + .bottom-nav {
+    .col-3 {
+        &:nth-child(2) {
+            a {
+                color: rgb(255, 151, 134); 
+            }
+        }
+    }
+}
+.wins-count + .bottom-nav {
+    .col-3 {
+        &:nth-child(3) {
+            a {
+                color: rgb(255, 151, 134); 
+            }
+        }
+    }
 }
