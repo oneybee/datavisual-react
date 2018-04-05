@@ -7,7 +7,7 @@ import WinsCountComponent from './WinsCount';
 import HeaderComponent from './Header';
 import PageNotFound from './PageNotFound';
 import BottomNavComponent from './BottomNav';
-
+import './App.scss';
 
 export default function App() {
   return (

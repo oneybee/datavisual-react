@@ -1,3 +1,5 @@
+@import '../../styles/base';
+
 .info-banner {
   margin-top: 30px;
   .section-title {
@@ -30,20 +32,20 @@
       }
   }
   .item-01 {
-      background: url('../../assets/images/box-color-01.png');
+      background: url('../../../assets/images/box-color-01.png');
       background-size: contain;
       background-repeat: no-repeat;
       margin-top: 30px;
   }
   .item-02 {
-      background: url('../../assets/images/box-color-02.png');
+      background: url('../../../assets/images/box-color-02.png');
       background-size: contain;
       background-repeat: no-repeat;
   }
   .item-03 {
-      background: url('../../assets/images/box-color-03.png');
+      background: url('../../../assets/images/box-color-03.png');
   }
   .item-04 {
-      background: url('../../assets/images/box-color-04.png');
+      background: url('../../../assets/images/box-color-04.png');
   }
 }
