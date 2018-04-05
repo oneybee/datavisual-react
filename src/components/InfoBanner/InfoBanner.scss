@@ -6,13 +6,14 @@
       position: relative;
       font-size: 24pt;
       font-weight: 900;
+      width: 100%;
+      text-align: center;
    }    
   .item {
       display: inline-block;
       background-repeat: no-repeat;
       height: 90px;
-      width: 147px;
-      margin-right: 12px;
+      margin-top: 30px;
       position: relative;
       .item-inner {
           text-align: center;
@@ -35,12 +36,13 @@
       background: url('../../../assets/images/box-color-01.png');
       background-size: contain;
       background-repeat: no-repeat;
-      margin-top: 30px;
+      background-position: center;
   }
   .item-02 {
       background: url('../../../assets/images/box-color-02.png');
       background-size: contain;
       background-repeat: no-repeat;
+      background-position: center;
   }
   .item-03 {
       background: url('../../../assets/images/box-color-03.png');

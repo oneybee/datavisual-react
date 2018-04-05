@@ -78,7 +78,7 @@ class WinsCountComponent extends Component {
                 <Tooltip/>
                 <Area type='monotone' dataKey='wins' stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
               </AreaChart>
-            ):('loading...')}
+            ):(<p>loading..</p>)}
           </div>
         </div>
       </div>
