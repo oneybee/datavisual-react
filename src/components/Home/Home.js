@@ -3,7 +3,7 @@ import Interactive from 'react-interactive';
 import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'Recharts';
 import { PieChart, Pie, Sector, Cell } from 'Recharts';
 import { log } from 'ruucm-util'
-import InfoBannerComponent from './InfoBanner';
+import InfoBannerComponent from '../InfoBanner';
 
 const data = [{name: 'wins', value: 28}, {name: 'losses', value: 2}, {name: 'draws', value:4}
                  ];
@@ -66,6 +66,7 @@ class HomeComponent extends Component {
               <span className="piechart-text-label"><div className="label-point loss"></div>{data[1]['value']}</span>
               <PieChart width={85} height={85}>
                 <Pie
+                  dataKey="value"
                   data={data}
                   cx={40} 
                   cy={40} 
@@ -78,7 +79,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle">
                 Bayern </text>
               </PieChart>
             </div>
@@ -87,6 +88,7 @@ class HomeComponent extends Component {
               <span className="piechart-text-label"><div className="label-point loss"></div>{data01[1]['value']}</span>
               <PieChart width={93} height={85}>
                 <Pie
+                  dataKey="value"
                   data={data01}
                   cx={40} 
                   cy={40} 
@@ -99,7 +101,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle">
                 BVB </text>
               </PieChart>
             </div>
@@ -108,6 +110,7 @@ class HomeComponent extends Component {
               <span className="piechart-text-label"><div className="label-point loss"></div>{data02[1]['value']}</span>
               <PieChart width={93} height={85}>
                 <Pie
+                  dataKey="value"
                   data={data02}
                   cx={40} 
                   cy={40} 
@@ -120,7 +123,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle">
                 Leverkusen </text>
               </PieChart>
             </div>
@@ -129,6 +132,7 @@ class HomeComponent extends Component {
               <span className="piechart-text-label"><div className="label-point loss"></div>{data03[1]['value']}</span>
               <PieChart width={93} height={85}>
                 <Pie
+                  dataKey="value"
                   data={data03}
                   cx={40} 
                   cy={40} 
@@ -141,7 +145,7 @@ class HomeComponent extends Component {
                     data.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]}/>)
                   }
                 </Pie>
-                <text className="piechart-label" x={45} y={50} textAnchor="middle" dominantBaselin="middle">
+                <text className="piechart-label" x={45} y={50} textAnchor="middle">
                 Gladbach </text>
               </PieChart>
             </div>

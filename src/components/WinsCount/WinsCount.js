@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'Recharts';
 import { log } from 'ruucm-util'
-import InfoBannerComponent from './InfoBanner';
+import InfoBannerComponent from '../InfoBanner';
 
 var obj = {  
   method: 'GET',
