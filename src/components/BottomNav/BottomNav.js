@@ -1,7 +1,7 @@
 import React, {component} from 'react';
 import { Link, Route } from 'react-router-dom';
 
-export default function BottomNavCompoonent() {
+export default function BottomNavComponent() {
   return (
       <div id="blogmenu" className="bottom-nav">
         <div className="row">
