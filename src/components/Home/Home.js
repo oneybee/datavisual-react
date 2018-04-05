@@ -3,7 +3,7 @@ import Interactive from 'react-interactive';
 import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'Recharts';
 import { PieChart, Pie, Sector, Cell } from 'Recharts';
 import { log } from 'ruucm-util'
-import InfoBannerComponent from './InfoBanner';
+import InfoBannerComponent from '../InfoBanner';
 
 const data = [{name: 'wins', value: 28}, {name: 'losses', value: 2}, {name: 'draws', value:4}
                  ];
