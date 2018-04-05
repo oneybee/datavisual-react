@@ -1,5 +1,6 @@
 import React, {component} from 'react';
 import { Link, Route } from 'react-router-dom';
+import './BottomNav.scss';
 
 export default function BottomNavComponent() {
   return (
