@@ -32,4 +32,8 @@ p, span {
         max-width: 100vw;
         border-radius: 0;
     }
+    .app {
+        height: initial;
+        min-height: 100vh;
+    }
 }
