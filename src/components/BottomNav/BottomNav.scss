@@ -7,7 +7,7 @@
     height: 82.5px;
     padding-right: 20px;
     padding-left: 20px;
-    position: fixed;
+    position: absolute;
     width: 100%;
     bottom: 0;
     a {
@@ -55,5 +55,10 @@
                 color: rgb(255, 151, 134); 
             }
         }
+    }
+}
+@media screen and (max-width: 600px) {
+    .bottom-nav {
+        position: fixed;
     }
 }

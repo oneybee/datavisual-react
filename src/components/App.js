@@ -11,7 +11,7 @@ import './App.scss';
 
 export default function App() {
   return (
-    <div>
+    <div className='app'>
       <HeaderComponent />
       <Switch>
         <Route exact path="/" component={HomeComponent} />
